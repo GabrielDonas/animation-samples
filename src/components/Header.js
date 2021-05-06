@@ -24,7 +24,7 @@ export default function Header() {
         </Typography>
         <Button
           className={classes.button}
-          href="https://github.com/GabrielDonas"
+          href="https://github.com/GabrielDonas/animation-samples"
         >
           <GitHubIcon fontSize="large" />
         </Button>

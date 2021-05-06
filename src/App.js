@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import Title from "./components/Title";
 import Gallery from "./components/Gallery";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Header />
+        <Title />
         <Gallery />
       </ThemeProvider>
     </>

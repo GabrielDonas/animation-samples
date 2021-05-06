@@ -1,14 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Animation from "./../animations/Animation";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Grid,
-  Card,
-  CardMedia,
-  Typography,
-  IconButton,
-} from "@material-ui/core";
+import { Grid, Card, Typography, IconButton } from "@material-ui/core";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import PauseSharpIcon from "@material-ui/icons/PauseSharp";
 import StopSharpIcon from "@material-ui/icons/StopSharp";
 
 //Defining classes with MUI
@@ -36,10 +31,27 @@ const useStyles = makeStyles((theme) => ({
 export default function Canvas() {
   const classes = useStyles();
 
+  //Animation Controls
+  const [isPaused, setIsPaused] = useState(false);
+  const [isStopped, setIsStopped] = useState(false);
+
+  const handlePlay = () => {
+    setIsStopped(false);
+    setIsPaused(false);
+  };
+
+  const handleStop = () => {
+    setIsStopped(true);
+  };
+
+  const handlePause = () => {
+    setIsPaused(!isPaused);
+  };
+
   return (
     <Grid item md={4} xs={10}>
       <Card className={classes.card}>
-        <Animation />
+        <Animation isStopped={isStopped} isPaused={isPaused} />
         <Typography
           gutterBottom
           variant="h6"
@@ -49,10 +61,16 @@ export default function Canvas() {
           Spinning Wheel
         </Typography>
         <div className={classes.control}>
-          <IconButton aria-label="add to favorites">
+          <IconButton aria-label="play animation" onClick={handlePlay}>
             <PlayArrowIcon fontSize="large" className={classes.controlButton} />
           </IconButton>
-          <IconButton aria-label="share">
+          <IconButton aria-label="pause animation" onClick={handlePause}>
+            <PauseSharpIcon
+              fontSize="large"
+              className={classes.controlButton}
+            />
+          </IconButton>
+          <IconButton aria-label="stop animation" onClick={handleStop}>
             <StopSharpIcon fontSize="large" className={classes.controlButton} />
           </IconButton>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Lottie from "react-lottie";
 import spinningWheel from "./dots.json";
 
@@ -11,10 +11,18 @@ const defaultOptions = {
   },
 };
 
-export default function Animation() {
-  return (
-    <div style={{ margin: "1rem", display: "flex" }}>
-      <Lottie options={defaultOptions} height={300} width={300} />
-    </div>
-  );
+export default function Animation(props) {
+  return useMemo(() => {
+    return (
+      <div style={{ margin: "1rem", display: "flex" }}>
+        <Lottie
+          options={defaultOptions}
+          height={300}
+          width={300}
+          isStopped={props.isStopped}
+          isPaused={props.isPaused}
+        />
+      </div>
+    );
+  }, [props.isStopped, props.isPaused]);
 }

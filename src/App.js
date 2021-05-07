@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const palette = require("./style/palette.json");
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <Title />
         <Gallery />
+        <Footer />
       </ThemeProvider>
     </>
   );

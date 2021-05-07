@@ -28,8 +28,8 @@ export default function Title() {
         </Box>
       </Typography>
       <Typography variant="body1" className={classes.subTitle}>
-        A single-page application to display your SVG animations and interact
-        with them. <br />
+        A single-page application to showcase SVG animations and interact with
+        them. <br />
         All of these animations were created in After Effects, exported with
         Bodymovin, and rendered natively.
       </Typography>

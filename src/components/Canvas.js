@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 //Canvas Component
-export default function Canvas() {
+export default function Canvas(props) {
   const classes = useStyles();
 
   //Animation Controls
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   const [isStopped, setIsStopped] = useState(false);
 
   const handlePlay = () => {
@@ -51,14 +51,18 @@ export default function Canvas() {
   return (
     <Grid item md={4} xs={10}>
       <Card className={classes.card}>
-        <Animation isStopped={isStopped} isPaused={isPaused} />
+        <Animation
+          isStopped={isStopped}
+          isPaused={isPaused}
+          animation={props.animation}
+        />
         <Typography
           gutterBottom
           variant="h6"
           component="h2"
           className={classes.title}
         >
-          Spinning Wheel
+          {props.animationTitle}
         </Typography>
         <div className={classes.control}>
           <IconButton aria-label="play animation" onClick={handlePlay}>

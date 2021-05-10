@@ -3,6 +3,13 @@ import Canvas from "./Canvas";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
+//NEXT: HOW TO IMPORT FILES FROM THE ANIMATIONS FOLDER
+
+//Import the graphics here:
+import dots from "../animations/dots.json";
+const spinningWheel = require("../animations/spinning_wheel.json");
+//import spinningWheel from "../animations/spinning_wheel.json";
+
 //Defining classes with MUI
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,9 +36,11 @@ export default function Gallery() {
       justify="center"
       alignItems="center"
     >
-      <Canvas />
-      <Canvas />
-      <Canvas />
+      <Canvas animationTitle={dots.title} animation={dots.animation} />
+      <Canvas
+        animationTitle={spinningWheel.title}
+        animation={spinningWheel.animation}
+      />
     </Grid>
   );
 }

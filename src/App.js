@@ -5,6 +5,7 @@ import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
+//Material UI Custom Palette
 const palette = require("./style/palette.json");
 
 const theme = createMuiTheme(palette);

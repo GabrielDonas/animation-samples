@@ -1,19 +1,18 @@
 import React, { useMemo } from "react";
 import Lottie from "react-lottie";
-import spinningWheel from "./dots.json";
-
-//Lottie Settings
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: spinningWheel,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
 
 export default function Animation(props) {
   return useMemo(() => {
+    //Lottie Settings
+    const defaultOptions = {
+      loop: true,
+      autoplay: false,
+      animationData: props.animation,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+
     return (
       <div style={{ margin: "1rem", display: "flex" }}>
         <Lottie
@@ -25,5 +24,5 @@ export default function Animation(props) {
         />
       </div>
     );
-  }, [props.isStopped, props.isPaused]);
+  }, [props.isStopped, props.isPaused, props.animation]);
 }

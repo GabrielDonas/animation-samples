@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
-//remove color from the hyperlink
+import { AppBar, Toolbar, Typography, Link } from "@material-ui/core";
+
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "fixed",
@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  link: {
+    color: theme.palette.primary.light,
+  },
 }));
 
 export default function Footer() {
@@ -24,8 +27,17 @@ export default function Footer() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.title} variant="subtitle2" noWrap>
-            Animations by Maya | Developed by
-            <a href="https://gabrieldonas.com/"> Gabriel Donas</a>
+            Animations by{" "}
+            <Link
+              href="https://www.behance.net/mayarapicoli"
+              className={classes.link}
+            >
+              Mayara Picoli
+            </Link>{" "}
+            | Developed by{" "}
+            <Link href="https://gabrieldonas.com" className={classes.link}>
+              Gabriel Donas
+            </Link>
           </Typography>
         </Toolbar>
       </AppBar>

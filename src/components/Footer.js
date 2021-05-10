@@ -2,15 +2,14 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Link } from "@material-ui/core";
 
+//Defining classes with MUI
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "fixed",
     display: "flex",
-    //alignItems: "center",
     bottom: 0,
     left: 0,
     width: "100vw",
-    //backgroundColor: theme.palette.primary.light,
   },
   title: {
     flexGrow: 1,
@@ -20,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//Footer Component
 export default function Footer() {
   const classes = useStyles();
   return (

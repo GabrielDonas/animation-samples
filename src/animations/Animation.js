@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import Lottie from "react-lottie";
 import spinningWheel from "./dots.json";
 
+//Lottie Settings
 const defaultOptions = {
   loop: true,
   autoplay: true,

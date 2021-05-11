@@ -12,4 +12,34 @@ export const animationList = [
     title: "Spinning Wheel",
     data: require("./lotties/spinning_wheel.json"),
   },
+  {
+    id: nanoid(),
+    title: "Dots",
+    data: require("./lotties/dots.json"),
+  },
+  {
+    id: nanoid(),
+    title: "Spinning Wheel",
+    data: require("./lotties/spinning_wheel.json"),
+  },
+  {
+    id: nanoid(),
+    title: "Dots",
+    data: require("./lotties/dots.json"),
+  },
+  {
+    id: nanoid(),
+    title: "Spinning Wheel",
+    data: require("./lotties/spinning_wheel.json"),
+  },
+  {
+    id: nanoid(),
+    title: "Dots",
+    data: require("./lotties/dots.json"),
+  },
+  {
+    id: nanoid(),
+    title: "Spinning Wheel",
+    data: require("./lotties/spinning_wheel.json"),
+  },
 ];

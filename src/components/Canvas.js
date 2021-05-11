@@ -12,8 +12,10 @@ import StopSharpIcon from "@material-ui/icons/StopSharp";
 const useStyles = makeStyles((theme) => ({
   card: {
     textAlign: "center",
-    minWidth: 250,
-    maxWidth: 500,
+
+    [theme.breakpoints.down("sm")]: {
+      width: 250,
+    },
   },
   control: {
     display: "flex",
@@ -23,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
   controlButton: {
     color: theme.palette.primary.light,
-  },
-  title: {
-    //color: theme.palette.primary.light,
   },
 }));
 
@@ -51,7 +50,7 @@ export default function Canvas(props) {
   };
 
   return (
-    <Grid item md={4} xs={10}>
+    <Grid item>
       <Card className={classes.card}>
         <Animation
           isStopped={isStopped}

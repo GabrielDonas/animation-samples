@@ -9,11 +9,19 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     bottom: 0,
     left: 0,
-    width: "100vw",
+
+    [theme.breakpoints.up("xl")]: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
   },
+
   title: {
-    flexGrow: 1,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 10.5,
+    },
   },
+
   link: {
     color: theme.palette.primary.light,
   },

@@ -3,19 +3,21 @@ import Canvas from "./Canvas";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
-//Import the graphics here
+//Importing graphics
 import { animationList } from "../animations/animationList";
 
 //Defining classes with MUI
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down("sm")]: {
+      paddingLeft: theme.spacing(3),
       paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(10),
     },
     [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(5),
+      padding: theme.spacing(8),
     },
-    width: "100vw",
+    width: "100%",
   },
 }));
 

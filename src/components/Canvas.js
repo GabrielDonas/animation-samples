@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Animation from "./../animations/Animation";
+import Animation from "./Animation";
+
+//MUI Imports
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Card, Typography, IconButton } from "@material-ui/core";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";

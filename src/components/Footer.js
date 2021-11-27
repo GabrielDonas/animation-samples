@@ -35,14 +35,7 @@ export default function Footer() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.title} variant="subtitle2" noWrap>
-            Animations by{" "}
-            <Link
-              href="https://www.behance.net/mayarapicoli"
-              className={classes.link}
-            >
-              Mayara Picoli
-            </Link>{" "}
-            | Developed by{" "}
+            Developed by{" "}
             <Link href="https://gabrieldonas.com" className={classes.link}>
               Gabriel Donas
             </Link>
